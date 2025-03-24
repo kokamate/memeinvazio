@@ -31,6 +31,21 @@ async function register() {
         const data = await response.json();
         console.log(data);
 
+        if (response.ok) {
+            alert(data.message);
+            window.location.href='../html/login.html';
+        }else if (data.errors) {
+            let errorMessags = '';
+            data.errors.forEach(error => {
+                errorMessags += $`{error.error}\n`;
+            });
+            alert(errorMessags);
+        } else if (data.error){
+            alert(data.error);
+        } else {
+            alert('Ismeretlen hiba!');
+        }
+
     } catch (error) {
         console.log(error);
     }
