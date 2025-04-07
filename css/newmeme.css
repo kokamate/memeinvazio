@@ -94,31 +94,39 @@ nav a:hover {
     display: flex;
 }
 
-/* -- Plus gomb -- */
-
-.fixed {
-    position: fixed;
-    right: 30px;
-    top: 70%;
-    background-color: var(--text-color);
-    width: 60px;
-    height: 60px;
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    gap: 40px;
+    padding: 180px;
+}
+
+/* -- Main div formázása -- */
+.newmeme {
+    height: 300px;
+    width: 500px;
+    border-radius: 0.5rem;
+    background-image: url('../img/transparent.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.newmeme > label {
+    background-color: #62605c;
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1.875rem;
+    padding: 0.6rem;
     cursor: pointer;
-    z-index: 1000;
     transition: 0.5s ease;
 }
 
-.fixed:hover {
+.newmeme > label:hover {
     transform: scale(1.1);
-}
-
-.fixed > i {
-    color: white;
-    font-size: 2.5rem;
 }
 
 /* hamburger menü 768px-től */
@@ -138,13 +146,6 @@ nav a:hover {
         left: 0;
         font-size: 1.5rem;
         display: none;
-    }
-    .fixed{
-        width: 40px;
-        height: 40px;
-    }
-    .fixed > i {
-        font-size: 2rem;
     }
 }
 
