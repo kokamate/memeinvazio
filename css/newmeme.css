@@ -40,6 +40,7 @@ nav {
     display: flex;
     gap: 2rem;
     font-size: 2rem;
+    z-index: 1000;
 }
 
 nav a {
@@ -100,6 +101,31 @@ main {
     align-items: center;
     gap: 40px;
     padding: 180px;
+    flex-direction: column;
+}
+
+.uploadButton {
+    background-color: var(--text-color);
+    width: 500px;
+    padding: 15px;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.5s;
+}
+
+.uploadButton:hover {
+    transform: scale(1.1);
+}
+
+.uploadButton>button {
+    font-size: 1.5rem;
+    color: white;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
 }
 
 /* -- Main div formázása -- */
@@ -110,6 +136,7 @@ main {
     background-image: url('../img/transparent.jpg');
     background-size: cover;
     position: relative;
+
 }
 
 .newmeme > label {
@@ -129,6 +156,10 @@ main {
     transform: scale(1.1);
 }
 
+.newmeme > input {
+    display: none;
+}
+
 /* hamburger menü 768px-től */
 
 @media screen and (max-width: 768px){
@@ -146,6 +177,10 @@ main {
         left: 0;
         font-size: 1.5rem;
         display: none;
+    }
+
+    .newmeme, .uploadButton{
+        width: 350px;
     }
 }
 
