@@ -6,6 +6,5 @@ btnLogin.addEventListener('click', () => {
 });
 
 btnReg.addEventListener('click', () => {
-    window.location.href = '../html/registration.html';
+    window.location.href = '../html/registration.html'
 });
-

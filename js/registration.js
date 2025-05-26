@@ -11,7 +11,7 @@ async function register() {
 
         console.log(email, name, psw, psw2);
 
-        if (psw !== psw2){
+        if (psw !== psw2) {
             return alert('A két jelszó nem egyezik!');
         }
 
@@ -20,32 +20,28 @@ async function register() {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({ 
-                email, 
-                name, 
-                psw})
+            body: JSON.stringify({ email, name, psw })
         });
 
         console.log(response);
-
         const data = await response.json();
         console.log(data);
-
+        
         if (response.ok) {
             alert(data.message);
-            window.location.href='../html/login.html';
-        }else if (data.errors) {
-            let errorMessags = '';
+            window.location.href = '../html/login.html';
+        } else if (data.errors) {
+            let errorMessages = '';
             data.errors.forEach(error => {
-                errorMessags += $`{error.error}\n`;
+                errorMessages += `${error.error}\n`;   
             });
-            alert(errorMessags);
-        } else if (data.error){
+            alert(errorMessages);
+        } else if (data.error) {
             alert(data.error);
         } else {
             alert('Ismeretlen hiba!');
         }
-
+        
     } catch (error) {
         console.log(error);
     }

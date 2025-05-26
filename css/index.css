@@ -1,5 +1,5 @@
 :root {
-    --text-color: #17bd3e;
+    --text-color: #17BD3E; 
 }
 
 * {
@@ -18,17 +18,17 @@ body {
 
 .tarolo {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     font-size: 3rem;
-    gap: 2rem;
 }
 
 .focim {
     text-transform: uppercase;
     text-align: center;
-    font-weight: 500;
+    font-size: 500;
     user-select: none;
 }
 
@@ -44,36 +44,34 @@ body {
     border-radius: 20px;
     padding: 15px;
     width: 500px;
-    margin: 50px 0 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.reg {
-   background-color: white;
-   margin-top: 20px;
-}
-
-#btnLogin, #btnReg {
-    font-size: 1.5rem;
-    color: white;
-    background-color: inherit;
-    border: none;
-    cursor: inherit;
-}
-
-#btnReg {
-    color: #17BD3E;
+    transition: ease 0.5s;
 }
 
 .login:hover, .reg:hover {
     transform: scale(1.01);
 }
 
-@media screen and (max-width: 428px) {
+#btnLogin {
+    color: white;
+}
+
+#btnReg {
+    color: var(--text-color);
+}
+
+#btnLogin, #btnReg {
+    font-size: 1.5rem;
+    background-color: inherit;
+    border: none;
+    cursor: inherit;
+}
+
+@media screen and (max-width: 450px) {
     .login, .reg {
-        width: 350px;
+        width: 340px;
     }
 }

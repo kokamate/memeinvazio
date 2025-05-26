@@ -1,5 +1,5 @@
 :root {
-    --textcolor: #17BD3E;
+    --text-color: #17BD3E;
 }
 
 * {
@@ -33,7 +33,7 @@ body {
 }
 
 .focim_zold {
-    color: var(--textcolor);
+    color: var(--text-color);
 }
 
 .input {
@@ -54,16 +54,19 @@ input {
 }
 
 .reg {
-    background-color: var(--textcolor);
+    background-color: var(--text-color);
     width: 500px;
     border-radius: 20px;
-    padding: 15px;
-    margin: 50px 0 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: ease 0.5s;
+    padding: 15px;
     cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.reg:hover {
+    transform: scale(1.01);
 }
 
 .reg button {
@@ -72,10 +75,6 @@ input {
     background-color: inherit;
     border: none;
     cursor: inherit;
-}
-
-.reg:hover {
-    transform: scale(1.01);
 }
 
 @media screen and (max-width: 500px) {

@@ -1,5 +1,5 @@
 :root {
-    --textcolor: #17BD3E;
+    --text-color: #17BD3E;
 }
 
 * {
@@ -33,7 +33,7 @@ body {
 }
 
 .focim_zold {
-    color: var(--textcolor);
+    color: var(--text-color);
 }
 
 .input {
@@ -41,7 +41,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 500px;
-    margin: 10px 0;
     border: 1px solid black;
     border-radius: 20px;
 }
@@ -54,20 +53,23 @@ input {
     outline: none;
 }
 
-.log {
-    background-color: var(--textcolor);
+.login {
+    background-color: var(--text-color);
     width: 500px;
     border-radius: 20px;
-    padding: 15px;
-    margin: 50px 0 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: ease 0.5s;
+    padding: 15px;
     cursor: pointer;
+    transition: ease 0.5s;
 }
 
-.log button {
+.login:hover {
+    transform: scale(1.01);
+}
+
+.login button {
     font-size: 1.5rem;
     color: white;
     background-color: inherit;
@@ -75,12 +77,10 @@ input {
     cursor: inherit;
 }
 
-.log:hover {
-    transform: scale(1.01);
-}
-
 @media screen and (max-width: 500px) {
-    .log, .input {
+
+    .login,
+    .input {
         width: 340px;
     }
 }
